@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Flip Card 游戏</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Flip Card 配对游戏</h1>
+<div id="level">关卡：-</div>
+<div id="score">得分：0</div>
+<div id="timer">倒计时：60 秒</div>
+<button id="toggle-sound">🔊 音效开</button>
+<div id="message"></div>
+<div id="game-board"></div>
+
+<audio id="match-sound" src="sounds/match.wav" preload="auto"></audio>
+<audio id="wrong-sound" src="sounds/wrong.wav" preload="auto"></audio>
+<audio id="win-sound" src="sounds/win.wav" preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

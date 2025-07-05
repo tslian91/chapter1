@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>汉字配对游戏 - 首页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; text-align: center; background: #f0f0f0; }
+    h1 { margin-top: 30px; }
+    button { margin: 10px; padding: 10px 20px; font-size: 18px; }
+    #leaderboard { margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <h1>汉字配对游戏</h1>
+  <p>请选择关卡开始游戏：</p>
+  <button onclick="startLevel(1)">第1关</button>
+  <button onclick="startLevel(2)">第2关</button>
+
+  <h2>🎖 历史最高分</h2>
+  <div id="leaderboard">载入中...</div>
+
+  <script>
+    function startLevel(level) {
+      location.href = 'game.html?level=' + level;
+    }
+
+    function loadLeaderboard() {
+      const score = localStorage.getItem("flipcard_highscore") || 0;
+      document.getElementById("leaderboard").innerText = "最高得分：" + score;
+    }
+
+    window.onload = loadLeaderboard;
+  </script>
+</body>
+</html>
